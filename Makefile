@@ -7,6 +7,8 @@ CPPFLAGS = -I ./include
 
 SRC = src/main.c \
 	src/create.c \
+	src/run.c \
+	src/move_raquette.c \
 
 	
 NAME = main

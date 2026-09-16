@@ -10,30 +10,8 @@ int main(void)
 
     sfRectangleShape *raquette1 = creation_raquette1();
     sfRectangleShape *raquette2 = creation_raquette2();
-
-    while(sfRenderWindow_isOpen(fenetre)){
-        sfEvent event;
-        while(sfRenderWindow_pollEvent(fenetre, &event)){ // On effectue une boucle pour utiliser tout les evenement en attente
-            if(event.type == sfEvtClosed)
-                sfRenderWindow_close(fenetre);
-        }
-
-        if(sfKeyboard_isKeyPressed(sfKeyZ))
-            sfRectangleShape_move(raquette1, (sfVector2f){0, -7}); // déplace de 5 pixels vers le haut
-        
-        if(sfKeyboard_isKeyPressed(sfKeyS))
-            sfRectangleShape_move(raquette1, (sfVector2f){0, 7}); // déplace de 5 pixels vers le bas
-
-        if(sfKeyboard_isKeyPressed(sfKeyUp))
-            sfRectangleShape_move(raquette2, (sfVector2f){0, -7}); // déplace de 5 pixels vers le haut
-        
-        if(sfKeyboard_isKeyPressed(sfKeyDown))
-            sfRectangleShape_move(raquette2, (sfVector2f){0, 7}); // déplace de 5 pixels vers le bas
-        
-        sfRenderWindow_clear(fenetre, sfBlack);
-        sfRenderWindow_drawRectangleShape(fenetre, raquette1, NULL);
-        sfRenderWindow_drawRectangleShape(fenetre, raquette2, NULL);
-        sfRenderWindow_display(fenetre);
-    }
+    
+    run(fenetre, raquette1, raquette2);
+    
     return 0;
 }   
