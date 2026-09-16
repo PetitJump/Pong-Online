@@ -1,11 +1,12 @@
 
 CC = gcc
 
-CFLAGS = -Wall -Wextra 
+CFLAGS = -Wall -Wextra -lcsfml-graphics -lcsfml-window -lcsfml-system
 
 CPPFLAGS = -I ./include
 
 SRC = src/main.c \
+	src/create.c \
 
 	
 NAME = main
