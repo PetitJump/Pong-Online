@@ -10,8 +10,9 @@ int main(void)
 
     sfRectangleShape *raquette1 = creation_raquette1();
     sfRectangleShape *raquette2 = creation_raquette2();
+    sfCircleShape *balle = creation_balle();
     
-    run(fenetre, raquette1, raquette2);
+    run(fenetre, raquette1, raquette2, balle);
     
     return 0;
 }   
