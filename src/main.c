@@ -6,7 +6,8 @@ int main(void)
 {
     sfVideoMode taille = {2000, 1200, 32}; // Largeur hauteur couleurs
     sfRenderWindow *fenetre = sfRenderWindow_create(taille, "Pong", sfDefaultStyle, sfWindowed, NULL);
-    
+    sfRenderWindow_setFramerateLimit(fenetre, 60);
+
     sfRectangleShape *raquette1 = creation_raquette1();
     sfRectangleShape *raquette2 = creation_raquette2();
 
@@ -18,16 +19,16 @@ int main(void)
         }
 
         if(sfKeyboard_isKeyPressed(sfKeyZ))
-            sfRectangleShape_move(raquette1, (sfVector2f){0, -1});  // déplace de 5 pixels vers le haut
+            sfRectangleShape_move(raquette1, (sfVector2f){0, -7}); // déplace de 5 pixels vers le haut
         
         if(sfKeyboard_isKeyPressed(sfKeyS))
-            sfRectangleShape_move(raquette1, (sfVector2f){0, 1});   // déplace de 5 pixels vers le bas
+            sfRectangleShape_move(raquette1, (sfVector2f){0, 7}); // déplace de 5 pixels vers le bas
 
         if(sfKeyboard_isKeyPressed(sfKeyUp))
-            sfRectangleShape_move(raquette2, (sfVector2f){0, -1});  // déplace de 5 pixels vers le haut
+            sfRectangleShape_move(raquette2, (sfVector2f){0, -7}); // déplace de 5 pixels vers le haut
         
         if(sfKeyboard_isKeyPressed(sfKeyDown))
-            sfRectangleShape_move(raquette2, (sfVector2f){0, 1});   // déplace de 5 pixels vers le bas
+            sfRectangleShape_move(raquette2, (sfVector2f){0, 7}); // déplace de 5 pixels vers le bas
         
         sfRenderWindow_clear(fenetre, sfBlack);
         sfRenderWindow_drawRectangleShape(fenetre, raquette1, NULL);
