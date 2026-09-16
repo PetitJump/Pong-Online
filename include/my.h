@@ -6,6 +6,7 @@ sfRectangleShape* creation_raquette2(void);
 sfCircleShape* creation_balle(void);
 void run(sfRenderWindow *fenetre, sfRectangleShape *raquette1, sfRectangleShape *raquette2, sfCircleShape *balle);
 void move_raquette(sfRectangleShape *raquette1, sfRectangleShape *raquette2);
+void move_balle(sfCircleShape* balle);
 void draw(sfRenderWindow *fenetre, sfRectangleShape *raquette1, sfRectangleShape *raquette2, sfCircleShape *balle);
 
 #endif

@@ -10,6 +10,7 @@ SRC = src/main.c \
 	src/run.c \
 	src/move_raquette.c \
 	src/draw.c \
+	src/move_balle.c \
 
 	
 NAME = main
