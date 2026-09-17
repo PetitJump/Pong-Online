@@ -1,5 +1,6 @@
 #include <CSFML/Window.h>
 #include <CSFML/Graphics.h>
+#include <stdio.h>
 #include "my.h"
 
 void run(sfRenderWindow *fenetre, sfRectangleShape *raquette1, sfRectangleShape *raquette2, sfCircleShape *balle)
@@ -14,9 +15,9 @@ void run(sfRenderWindow *fenetre, sfRectangleShape *raquette1, sfRectangleShape 
                 sfRenderWindow_close(fenetre);
         }
         move_raquette(raquette1, raquette2);
-        if (move_balle(balle, &vitesse_x, &vitesse_y, raquette1, raquette2) == 0)
+        if (move_balle(balle, &vitesse_x, &vitesse_y, raquette1, raquette2, &score) == 0)
             break; // Fin du jeu
-
+        
         draw(fenetre, raquette1, raquette2, balle);
     }
 }   
