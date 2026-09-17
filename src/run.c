@@ -13,7 +13,8 @@ void run(sfRenderWindow *fenetre, sfRectangleShape *raquette1, sfRectangleShape 
                 sfRenderWindow_close(fenetre);
         }
         move_raquette(raquette1, raquette2);
-        move_balle(balle, &vitesse_x, &vitesse_y);
+        if (move_balle(balle, &vitesse_x, &vitesse_y, raquette1, raquette2) == 0)
+            break; // Fin du jeu
 
         draw(fenetre, raquette1, raquette2, balle);
     }
