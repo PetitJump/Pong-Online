@@ -1,3 +1,0 @@
-# Récap des fonctions CSFML
-
-A faire...

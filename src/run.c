@@ -6,6 +6,7 @@ void run(sfRenderWindow *fenetre, sfRectangleShape *raquette1, sfRectangleShape 
 {
     float vitesse_x = 5.0f;
     float vitesse_y = 5.0f;
+    int score = 0;
     while(sfRenderWindow_isOpen(fenetre)){
         sfEvent event;
         while(sfRenderWindow_pollEvent(fenetre, &event)){ // On effectue une boucle pour utiliser tout les evenement en attente
