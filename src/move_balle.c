@@ -16,14 +16,12 @@ int move_balle(sfCircleShape* balle, float *vitesse_x, float *vitesse_y, sfRecta
     if (pos_balle.x < 70 && pos_balle.y > pos_raquette1.y && pos_balle.y < pos_raquette1.y+100){
         *vitesse_x = *vitesse_x * -1;
         *score += 1;
-        printf("Score : %i\n", *score);
     }
 
 
     else if (pos_balle.x > 1900 && pos_balle.y > pos_raquette2.y && pos_balle.y < pos_raquette2.y+100){
         *vitesse_x = *vitesse_x * -1;
         *score += 1;
-        printf("Score : %i\n", *score);
         }
 
     sfCircleShape_move(balle, (sfVector2f){*vitesse_x, *vitesse_y});
