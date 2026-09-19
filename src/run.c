@@ -9,11 +9,13 @@ void run(sfRenderWindow *fenetre, sfRectangleShape *raquette1, sfRectangleShape 
     float vitesse_y = 5.0f;
     int score = 0;
 
+    // Création du texte
     sfFont *police = sfFont_createFromFile("assets/Jersey25-Regular.ttf");
     sfText *score_text = sfText_create(police);
     sfText_setCharacterSize(score_text, 40);
     sfText_setFillColor(score_text, sfGreen);
     sfText_setPosition(score_text, (sfVector2f){950, 20});
+    /// Création du texte
 
 
     while(sfRenderWindow_isOpen(fenetre)){
@@ -26,10 +28,6 @@ void run(sfRenderWindow *fenetre, sfRectangleShape *raquette1, sfRectangleShape 
         if (move_balle(balle, &vitesse_x, &vitesse_y, raquette1, raquette2, &score) == 0)
             break; // Fin du jeu
         
-        char texte[10];
-        sprintf(texte, "Score : %i", score);
-        sfText_setString(score_text, texte);
-        
-        draw(fenetre, raquette1, raquette2, balle, score_text);
+        draw(fenetre, raquette1, raquette2, balle, score_text, score);
     }
 }   
