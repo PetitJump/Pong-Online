@@ -18,7 +18,7 @@ int move_balle(sfCircleShape* balle, float *vitesse_x, float *vitesse_y, sfRecta
         *score += 1;
     }
 
-    else if (pos_balle.x == 1900 && pos_balle.y > pos_raquette2.y && pos_balle.y < pos_raquette2.y+100){
+    else if (pos_balle.x == 1900 && pos_balle.y > pos_raquette2.y-8 && pos_balle.y < pos_raquette2.y+108){
         *vitesse_x = *vitesse_x * -1;
         *score += 1;
         }
